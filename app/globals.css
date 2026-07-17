@@ -1,0 +1,129 @@
+:root {
+  --cream: #f7f0df;
+  --paper: #fffaf0;
+  --navy: #173b4c;
+  --ocean: #2d7180;
+  --coral: #d9755b;
+  --gold: #d6a848;
+  --ink: #253136;
+  --muted: #6c7778;
+  --line: rgba(23,59,76,.15);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+a { color: inherit; }
+.shell { width: min(1120px, calc(100% - 40px)); margin-inline: auto; }
+.narrow { max-width: 760px; }
+
+.nav {
+  min-height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.brand { display: flex; gap: 12px; align-items: center; text-decoration: none; color: var(--navy); }
+.brand-mark {
+  width: 44px; height: 44px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: linear-gradient(145deg,#f6f6f6,#bfc5c7);
+  border: 1px solid #aab1b3;
+  box-shadow: inset 0 0 0 4px rgba(255,255,255,.45);
+  font-weight: 900;
+}
+.brand strong, .brand small { display: block; }
+.brand strong { letter-spacing: .03em; }
+.brand small { color: var(--coral); font-size: .72rem; text-transform: uppercase; letter-spacing: .12em; }
+.nav-links { display: flex; gap: 24px; }
+.nav-links a { text-decoration: none; font-weight: 700; font-size: .9rem; color: var(--navy); }
+
+.hero { padding: 70px 0 110px; }
+.eyebrow, .section-label {
+  text-transform: uppercase; letter-spacing: .18em;
+  font-weight: 800; font-size: .74rem; color: var(--coral);
+}
+.hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; align-items: center; gap: 70px; margin-top: 28px; }
+h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; color: var(--navy); line-height: 1.08; }
+h1 { font-size: clamp(3.4rem, 7vw, 6.8rem); letter-spacing: -.055em; margin: 0; max-width: 760px; }
+h2 { font-size: clamp(2.2rem, 4.5vw, 4.5rem); letter-spacing: -.035em; margin: 8px 0 22px; }
+h3 { font-size: 1.45rem; margin: 16px 0 10px; }
+.lead { max-width: 650px; font-size: 1.18rem; color: var(--muted); margin: 28px 0; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.button {
+  text-decoration: none; display: inline-flex; min-height: 50px; align-items: center;
+  justify-content: center; padding: 0 22px; border-radius: 999px; font-weight: 800;
+}
+.primary { background: var(--navy); color: white; }
+.secondary { border: 1px solid var(--line); color: var(--navy); background: rgba(255,255,255,.45); }
+
+.planet-card {
+  min-height: 430px; position: relative; display: grid; place-items: center;
+  background: radial-gradient(circle at 50% 50%, rgba(214,168,72,.12), transparent 52%);
+}
+.planet {
+  width: 275px; height: 275px; border-radius: 50%; z-index: 2;
+  background: linear-gradient(145deg,#e4e5e2 0%,#aeb7b9 38%,#f4f2e8 62%,#8f9b9d 100%);
+  box-shadow: 0 24px 55px rgba(23,59,76,.22), inset 0 0 0 7px rgba(255,255,255,.3);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  color: var(--navy); transform: rotate(-5deg);
+}
+.planet span { font-size: 1.15rem; letter-spacing: .2em; text-transform: uppercase; }
+.planet strong { font: 900 2.35rem Georgia,serif; }
+.planet em { color: var(--coral); font-style: normal; text-transform: uppercase; font-size: .72rem; letter-spacing: .18em; }
+.orbit { position: absolute; border: 2px solid var(--gold); border-radius: 50%; transform: rotate(-18deg); }
+.orbit-one { width: 390px; height: 145px; }
+.orbit-two { width: 345px; height: 110px; opacity: .45; }
+.star { position: absolute; color: var(--gold); font-size: 1.7rem; }
+.star-one { top: 52px; right: 60px; } .star-two { bottom: 50px; left: 70px; }
+.compass { position: absolute; bottom: 25px; right: 28px; border: 1px solid var(--navy); border-radius: 50%; width: 48px; height: 48px; display: grid; place-items: center; font: 700 1rem Georgia,serif; color: var(--navy); }
+
+.manifesto { background: var(--cream); padding: 110px 0; text-align: center; border-block: 1px solid var(--line); }
+.manifesto p:not(.section-label) { font-size: 1.15rem; color: var(--muted); }
+blockquote { margin: 38px auto 0; color: var(--ocean); font: italic 1.35rem Georgia,serif; }
+
+.kit { padding: 115px 0; }
+.section-heading { display: flex; justify-content: space-between; gap: 40px; align-items: end; margin-bottom: 44px; }
+.section-heading > p { max-width: 470px; color: var(--muted); }
+.cards { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; }
+.card { padding: 28px; background: var(--cream); border: 1px solid var(--line); border-radius: 18px; }
+.card p { color: var(--muted); font-size: .95rem; }
+.card-icon { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: var(--paper); color: var(--coral); border: 1px solid var(--line); font-size: 1.2rem; }
+
+.hourglass { background: var(--navy); color: white; padding: 95px 0; }
+.hourglass h2 { color: white; max-width: 760px; }
+.hourglass p { color: rgba(255,255,255,.72); max-width: 730px; }
+.hourglass-inner { display: grid; grid-template-columns: 120px 1fr; gap: 35px; align-items: center; }
+.hourglass-icon { font-size: 5rem; color: var(--gold); }
+.light { color: #efbd87; }
+
+.join { padding: 100px 0; display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+.join p:not(.section-label) { max-width: 650px; color: var(--muted); }
+footer { border-top: 1px solid var(--line); padding: 35px 0; }
+.footer-inner { display: flex; justify-content: space-between; gap: 30px; color: var(--navy); }
+.footer-inner strong, .footer-inner span { display: block; }
+.footer-inner span { color: var(--muted); font-size: .82rem; }
+
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .planet-card { min-height: 380px; }
+  .cards { grid-template-columns: repeat(2,1fr); }
+  .section-heading { display: block; }
+}
+@media (max-width: 620px) {
+  .nav-links { display: none; }
+  .hero { padding-top: 40px; }
+  .cards { grid-template-columns: 1fr; }
+  .planet { width: 220px; height: 220px; }
+  .orbit-one { width: 305px; height: 125px; }
+  .orbit-two { width: 275px; height: 95px; }
+  .hourglass-inner { grid-template-columns: 1fr; }
+  .join, .footer-inner { align-items: flex-start; flex-direction: column; }
+}
